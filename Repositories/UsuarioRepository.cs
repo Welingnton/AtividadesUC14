@@ -54,12 +54,12 @@ namespace Chapter.Repositories
 
         public List<Usuario> Listar()
         {
-            
+            return _context.Usuarios.ToList();
         }
 
         public Usuario Login(string email, string senha)
         {
-            throw new NotImplementedException();
+            return _context.Usuarios.First(u => u.Email == email && u.Senha == senha );
         }
     }
 }
